@@ -1,0 +1,51 @@
+**Wichtige Metadaten für versteinerte Holzfunde sind: Fundort, geologischer Kontext, Holzart, Zustand, Alter (z. B. über Dendrochronologie), Funddatum, Bearbeitungsspuren, Lagerung, und Referenzbilder. Diese helfen bei wissenschaftlicher Analyse, Vergleich und Dokumentation.**
+
+---
+
+## 🧬 Relevante Metadatenfelder für fossile/versteinerte Holzfunde
+
+Hier ist eine strukturierte Liste mit sinnvollen Feldern für deine Datenbank:
+
+### 🗺️ Fundbezogene Daten
+- **Fundort** (GPS-Koordinaten, Region, Grabungsstelle)
+- **Funddatum** (Zeitpunkt der Entdeckung)
+- **Fundumstände** (z. B. stratigrafische Lage, Tiefe, Begleitfunde)
+- **Geologischer Kontext** (Schicht, Formation, Alter der Umgebung)
+
+### 🌳 Holzspezifische Merkmale
+- **Holzart / Taxonomie** (z. B. Eiche, Kiefer – falls bestimmbar)
+- **Versteinerungsgrad** (vollständig, teilweise, karbonisiert)
+- **Erhaltungszustand** (z. B. Risse, Brüche, Verfärbungen)
+- **Baumringanzahl** (für Altersbestimmung)
+- **Jahrringmuster** (Breite, Dichte, Anomalien)
+- **Kernholz / Splintholz** (falls erkennbar)
+
+### 🧪 Datierung und Analyse
+- **Dendrochronologisches Alter** (Jahreszahl oder Zeitspanne)
+- **Datierungsmethode** (z. B. Dendrochronologie, C14, Stratigrafie)
+- **Referenzkurve verwendet** (z. B. Hallstatt-Kurve)
+- **Labor-ID / Proben-ID** (für externe Analysen)
+
+### 🖼️ Dokumentation
+- **Bildmaterial** (Fotos, Mikroskopbilder, CT-Scans)
+- **Beschreibung / Notizen** (Freitextfeld)
+- **Bearbeitungsspuren** (menschlich oder natürlich)
+- **Maße** (Länge, Breite, Dicke)
+
+### 📦 Lagerung und Verwaltung
+- **Sammlungsnummer / Inventarnummer**
+- **Lagerort / Depot**
+- **Zugänglichkeit / Status** (öffentlich, gesperrt, in Bearbeitung)
+- **Verknüpfte Publikationen / Literatur**
+
+---
+
+## 🧠 Optional: Erweiterte Felder
+- **Verknüpfte Funde** (z. B. Werkzeuge, Knochen)
+- **Projektzuordnung** (z. B. „Hallstatt 2025“)
+- **Bearbeiter / Forscher**
+- **Rechte / Lizenz für Bildmaterial**
+
+---
+
+Wenn du willst, kann ich dir direkt ein Datenbankschema vorschlagen – z. B. für Supabase oder PostgreSQL – inklusive Typen und Beziehungen. Willst du die Bilder direkt mit den Funden verknüpfen oder separat verwalten?

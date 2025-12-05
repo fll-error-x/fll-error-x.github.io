@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>TreetunkDB</title>
+  <link rel="stylesheet" href="static/css/gui.css">
+  <link rel="stylesheet" href="static/css/upload.css">
+  <link rel="stylesheet" href="static/css/info-box.css">
+  <link rel="icon" type="image/png" href="pictures/database.png">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+<body id="root">
+  <div class="header">
+    <div class="logo" onclick="location.reload()"><img src="pictures/database.png"><h1>TreetunkDB</h1></div>
+    <div class="login-button" >
+      <img src="pictures/user-icon.png" alt="User Icon" title="Anmelden">
+    </div>
+  </div>
+  <!-- Galerie-Container: hier werden die .card-Elemente eingefügt -->
+  <div class="layout">
+    <div class="database" id="bilder"></div>
+    <div class="upload-icon">
+      <img src="pictures/plus.png" alt="Upload">
+    </div>
+  </div>
+
+  <div class="editor" style="position:fixed; right:0; top:80px; width:300px;padding:16px; box-shadow:-2px 0 8px rgba(0,0,0,0.1);">
+    <div class="content">
+      <h3>Bild bearbeiten</h3>
+      <img class="image" src="" style="width:100%; margin-bottom:12px;" />
+      
+      <div class="editor-infos">
+        <label convertMethod="positionToString">Position:</label>
+        <label convertMethod="none">Holzart:</label>
+        <label convertMethod="none">Verarbeitungszustand:</label>
+        <label convertMethod="none">Funddatum:</label>
+      </div>
+
+      <button class="saveBtn">Speichern</button>
+      <button class="deleteBtn" style="margin-top:8px; background:#e74c3c; color:white;">Löschen</button>
+    </div>
+    <span class="placeholder-content"style="margin: 0px auto;display:none;">- Select an entry to view -</span>
+  </div>
+  <div class="overlay hide"></div>
+  <div class="info-box hide">
+
+  </div>
+
+
+  <form id="uploadForm", class="upload-form upload-form-hide form-group">
+      <h1>Bild hochladen</h1>
+        <h3>Datei</h3>
+        <label>Bilddatei
+          <input type="file" id="bildDatei" accept="image/*"/>
+        </label>
+        <!-- Position -->
+        <h3>Fundort</h3>
+          <label read="true" force="true">Breitengrad
+            <input type="number" labelPart="deg" placeholder="Grad" min="0" max="90" class="upload-input"/>
+            <input type="number" labelPart="min" placeholder="Minuten" min="0" max="59" class="upload-input"/>
+            <select labelPart="dir" class="upload-input">
+              <option value="N">N</option>
+              <option value="S">S</option>
+            </select>
+          </label>
+
+          <label read="true" force="true">Längengrad
+            <input type="number" labelPart="deg" placeholder="Grad" min="0" max="180" class="upload-input"/>
+            <input type="number" labelPart="min" placeholder="Minuten" min="0" max="59" class="upload-input"/>
+            <select labelPart="dir" class="upload-input">
+              <option value="E">E</option>
+              <option value="W">W</option>
+            </select>
+          </label>
+
+        <h3>Datum</h3>
+          <label read="true" force="true">Funddatum
+            <input type="date" id="aufnahmeDatum" class="upload-input"/>
+          </label>
+        <h3>Holz</h3>
+        <label read="true" force="true">Holzart
+          <input type="text" id="woodType" placeholder="Holzart">
+        </label>
+        <label read="true" force="true">Verarbeitungszustand
+          <select class="upload-input">
+              <option value="Nicht erkennbar">Nicht erkennbar</option>
+              <option value="Stamm">Stamm</option>
+            </select>
+        </label>
+
+
+        <button type="submit">Bild hochladen</button>
+  </form>
+  <div class="footer">
+    <div>© 2025 Till Piepenbreier</div><br>
+
+    <div>Icons: 
+      <a href="https://www.flaticon.com/free-icons/man-avatar" title="man avatar icons">Login</a>, 
+      <a href="https://www.flaticon.com/free-icons/question" title="question icons">Confirm </a>, 
+      <a href="https://www.flaticon.com/free-icons/error" title="error icons">Error</a>, 
+      <a href="https://www.flaticon.com/free-icons/information" title="information icons">Info</a>,
+      <a href="https://www.flaticon.com/free-icons/add" title="add icons">Plus</a>
+    </div>
+  </div>
+
+  <script src="static/js/database.js"></script>
+</body>
+</html>
