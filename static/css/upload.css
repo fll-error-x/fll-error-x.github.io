@@ -1,0 +1,143 @@
+
+@keyframes slideToLeft {
+  from {
+    transform: translateX(30vw); 
+  }
+  to {
+    /* verschiebe die Box so, dass sie 10px vom linken Rand endet */
+    transform: translateX(calc(-130vw + 10px + 100%));
+  }
+}
+@keyframes slideToRight {
+  from {
+    transform: translateX(calc(-130vw + 10px + 100%));
+    
+  }
+  to {
+    /* verschiebe die Box so, dass sie 10px vom linken Rand endet */
+    transform: translateX(30vw); 
+  }
+}
+/* Upload-Formular */
+.upload-form {
+  display: block;
+  gap: 8px;
+  padding: 12px;
+  width: calc(100vw - 140px);
+  height: calc(100vh - 60px);
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  background-color:#333;
+  border-radius: 8px;
+  z-index: 3000;
+  position: fixed;
+  bottom: 20px;
+  right: -30vw;
+  transition: scale 300ms ease-in-out, opacity 300ms ease-in-out, left 300ms ease-in-out, right 300ms ease-in-out, transform 300ms ease-in-out;
+  margin-left: 30px !important;
+  margin-right: auto;
+  
+}
+
+.upload-form input[type="file"],
+.upload-form input[type="number"],
+.upload-form select,
+.upload-form input[type="text"] {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-light);
+  padding: 6px;
+  border-radius: 4px;
+  height: 30px;
+  gap: 20px;
+}
+
+.upload-form button {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 30px;
+}
+
+.upload-form button:hover {
+  background-color: var(--accent-hover);
+}
+
+.upload-form-hide
+{
+  scale: 0;
+  opacity: 0;
+  animation: slideToRight 300ms forwards;
+}
+.upload-form-show
+{
+  scale: 1; opacity: 1;
+  animation: slideToLeft 300ms forwards;
+}
+.upload-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: cover;
+  background-color: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px var(--shadow-dark);
+  overflow:hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2000;
+  
+}
+
+.upload-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20%;
+  display: block;
+  image-rendering: auto;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.upload-icon img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 22px var(--shadow-dark);
+  border-color: var(--accent);
+}
+.upload-icon img.upload-shown
+{
+  transform: rotate(135deg);
+}
+
+.form-group {
+  display: block;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group label {
+  display: flex;
+  flex-direction: row;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+form.form-group label {
+  display: flex;              /* Label wird zum Flex-Container */
+  align-items: center;        /* Text und Felder vertikal ausrichten */
+  gap: 8px;                   /* Abstand zwischen Text und Feldern */
+  margin-bottom: 12px;        /* Abstand zum nächsten Label */
+}
+
+form.form-group label input,
+form.form-group label select {
+  flex: 0 0 auto;             /* Eingabefelder behalten ihre Größe */
+}
+
