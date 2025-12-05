@@ -5,6 +5,9 @@ styles = {
   danger: getComputedStyle(root).getPropertyValue('--danger').trim()
 }
 
+fetch('../json/relevant-data.json')
+  .then(r => r.json())
+  .then(d => console.log(d))
 const client = supabase.createClient(
       'https://pjvtmezsftuhtseznhhd.supabase.co', // deine Supabase-URL
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqdnRtZXpzZnR1aHRzZXpuaGhkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAyNzM0ODYsImV4cCI6MjA3NTg0OTQ4Nn0.OnPVKCy0_Ojdnuf6AuWb_Rsd_G935ZvJ1eqom2mFk_M'          // dein anon key
@@ -656,4 +659,5 @@ async function showUserIcon()
   }
   if(email)icon.title = "Eingeloggt als " + email;
   else icon.title = "Anmelden";
+
 }
